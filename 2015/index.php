@@ -51,7 +51,7 @@
             // Check of er een rij (user) is gevonden
             if ( mysql_num_rows($result) > 0 )
             {
-                echo "<p>Hoi ".$username." bent ingelogd!</p>";
+                echo "<h5>Hoi <strong>".$username."</strong>! Je bent ingelogd!</h5>";
                 echo "<pre>". print_r( mysql_fetch_assoc($result), true ) . "</pre>";
             }
             else
