@@ -5,7 +5,13 @@ var gulp = require('gulp'),
 gulp.task('serve', function() {
     connect.server({}, function (){
         browserSync({
-            proxy: '127.0.0.1'
+            proxy: '127.0.0.1/php-websecurity',
+            ghostMode: {
+                clicks: true,
+                location: true,
+                forms: true,
+                scroll: true
+            }
         });
     });
 
