@@ -48,7 +48,7 @@
             // Als de query is mislukt, dan tonen we de foutmelding
             if ( $result === false ) echo "<p>De query kon niet uitgevoegd worden. Error: ".mysql_error()."</p>";
 
-            // Check of er een rij (user) is gevonden
+            // Check of de user is gevonden
             if ( mysql_num_rows($result) > 0 )
             {
                 echo "<h5>Hoi <strong>".$username."</strong>! Je bent ingelogd!</h5>";
