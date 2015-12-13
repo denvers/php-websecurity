@@ -1,0 +1,10 @@
+{
+  "name": "php-websecurity",
+  "version": "1.0.2015",
+  "author": "Denver Sessink",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-connect-php": "0.0.7"
+  }
+}
