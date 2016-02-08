@@ -1,0 +1,1 @@
+<p>Hoi, ik ben een nieuws pagina.</p>
