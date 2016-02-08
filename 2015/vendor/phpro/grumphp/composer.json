@@ -1,0 +1,65 @@
+{
+    "name": "phpro/grumphp",
+    "description": "A composer plugin that enables source code quality checks.",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.6",
+        "composer-plugin-api": "~1.0",
+        "doctrine/collections": "~1.2",
+        "gitonomy/gitlib": "~0.1.7",
+        "seld/jsonlint": "~1.1",
+        "symfony/config": "~2.4|~3.0",
+        "symfony/console": "~2.6|~3.0",
+        "symfony/dependency-injection": "~2.4|~3.0",
+        "symfony/event-dispatcher": "~2.5|~3.0",
+        "symfony/filesystem": "~2.4|~3.0",
+        "symfony/finder": "~2.4|~3.0",
+        "symfony/options-resolver": "~2.6|~3.0",
+        "symfony/process": "~2.4|~3.0",
+        "symfony/yaml": "~2.4|~3.0"
+    },
+    "require-dev": {
+        "composer/composer": "^1.0-alpha11",
+        "phpspec/phpspec": "~2.4",
+        "squizlabs/php_codesniffer": "~2.3",
+        "roave/security-advisories": "dev-master@dev",
+        "fabpot/php-cs-fixer": "~1.0",
+        "phpunit/phpunit": "^4.8",
+        "sensiolabs/security-checker": "^3.0"
+    },
+    "suggest": {
+        "behat/behat": "Lets GrumPHP validate your project features.",
+        "fabpot/php-cs-fixer": "Lets GrumPHP automatically fix your codestyle.",
+        "phpspec/phpspec": "Lets GrumPHP spec your code.",
+        "phpunit/phpunit": "Lets GrumPHP run your unit tests.",
+        "squizlabs/php_codesniffer": "Lets GrumPHP sniff on your code.",
+        "roave/security-advisories": "Lets GrumPHP be sure that there are no known security issues.",
+        "sensiolabs/security-checker": "Lets GrumPHP be sure that there are no known security issues.",
+        "codeception/codeception": "Lets GrumPHP run your project's full stack tests"
+    },
+    "authors": [
+        {
+            "name": "Alexander Deruwe",
+            "email": "alexander.deruwe@phpro.be"
+        },
+        {
+            "name": "Toon Verwerft",
+            "email": "toon.verwerft@phpro.be"
+        }
+    ],
+    "extra": {
+      "class": "GrumPHP\\Composer\\GrumPHPPlugin"
+    },
+    "autoload": {
+        "psr-0": {
+            "GrumPHP\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "GrumPHPTest\\": "test/src/"
+        }
+    },
+    "bin": ["bin/grumphp"]
+}

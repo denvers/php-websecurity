@@ -1,0 +1,46 @@
+services:
+    config:
+        class: GrumPHP\Configuration\GrumPHP
+        arguments:
+          - '@service_container'
+
+    event_dispatcher:
+        class: Symfony\Component\EventDispatcher\EventDispatcher
+
+    filesystem:
+        class: Symfony\Component\Filesystem\Filesystem
+
+    executable_finder:
+        class: Symfony\Component\Process\ExecutableFinder
+
+    process_builder:
+      class: GrumPHP\Process\ProcessBuilder
+      arguments:
+        - '@locator.external_command'
+
+    git.repository:
+        class: Gitonomy\Git\Repository
+        arguments:
+          - '%git_dir%'
+
+    task_runner:
+        class: GrumPHP\Runner\TaskRunner
+        arguments:
+          - '@config'
+          - '@event_dispatcher'
+
+    locator.external_command:
+        class: GrumPHP\Locator\ExternalCommand
+        arguments:
+          - '%bin_dir%'
+          - '@executable_finder'
+
+    locator.changed_files:
+        class: GrumPHP\Locator\ChangedFiles
+        arguments:
+          - '@git.repository'
+
+    locator.registered_files:
+        class: GrumPHP\Locator\RegisteredFiles
+        arguments:
+          - '@git.repository'
