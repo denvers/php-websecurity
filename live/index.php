@@ -27,7 +27,7 @@
         {
             echo "<p>Hoi ".$username.", je bent ingelogd!</p>";
             $array = mysql_fetch_assoc($result);
-            echo "<pre>".print_r( $array, true)."</pre>";
+            echo "<pre>".print_r( $array, true )."</pre>";
         }
     }
     ?>
